@@ -8,9 +8,10 @@ const Stack = createStackNavigator();
 
 export default function NavigationStack() {
   return (
-    <Stack.Navigator>
-      <Stack.HomeScreen name="Home" component={HomeScreen} />
-      <Stack.SettingsScreen name="Settings" component={SettingsScreen} />
+    // initialRouteName, esto es para indicar cual es la default
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 }
